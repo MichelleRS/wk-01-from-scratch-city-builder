@@ -2,7 +2,7 @@
 
 ## Expected Layout
 
-![wireframe]()
+![wireframe](./assets/citybuilderwireframe.png)
 
 ### HTML
 
