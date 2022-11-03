@@ -22,6 +22,7 @@ const favoriteList = document.getElementById('favorite-list');
 let activitiesCounter = 0;
 let foodCounter = 0;
 let drinkCounter = 0;
+let favorites = [];
 
 /* Events */
 // activities section
@@ -55,11 +56,26 @@ drinkSelect.addEventListener('change', (e) => {
     displayStats();
 });
 
+shareButton.addEventListener('click', () => {
+    favorites.push(favoriteInput.value);
+    displayFavorites();
+    favoriteInput.value = '';
+});
+
 /* Display Functions */
 function displayStats() {
     activitiesChangeCounter.textContent = `${activitiesCounter}`;
     foodChangeCounter.textContent = `${foodCounter}`;
     drinkChangeCounter.textContent = `${drinkCounter}`;
+}
+
+function displayFavorites() {
+    favoriteList.textContent = '';
+    for (let favorite of favorites) {
+        const p = document.createElement('p');
+        p.textContent = favorite;
+        favoriteList.append(p);
+    }
 }
 
 // (don't forget to call any display functions you want to run on page load!)

@@ -44,17 +44,12 @@
 
 ## Workflow
 
--   displayStats()
--   Finish eventListeners for food and drinks
--   add favorite section and functionality
--   Research for/of loop
-
 ## Rubric
 
 -   [x] At least 3 dropdowns, with at least 3 options each. 6
 -   [x] On changing dropdowns, new images are displayed (1 point per dropdown) 6
 -   [x] The number of times each dropdown has changed is displayed to the user 2
--   [] An input with a button that allows the user to pick a slogan and displays to user 2
-    **Functions**
+-   [x] An input with a button that allows the user to pick a slogan and displays to user 2
+        **Functions**
 -   [x] Impure `displayStats(): attaches a string to the DOM describing how many times each dropdown has been changed` 2
--   [] Impure `displaySlogans() : clears DOM, loops through slogans, displays slogans on the page` 2
+-   [x] Impure `displaySlogans() : clears DOM, loops through slogans, displays slogans on the page` 2
