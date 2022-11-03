@@ -9,6 +9,10 @@ const foodSelect = document.getElementById('food-select');
 const foodImg = document.getElementById('food-img');
 const foodChangeCounter = document.getElementById('food-counter');
 
+const drinkSelect = document.getElementById('drink-select');
+const drinkImg = document.getElementById('drink-img');
+const drinkChangeCounter = document.getElementById('drink-counter');
+
 /* State */
 
 let activitiesCounter = 0;
@@ -30,7 +34,6 @@ activitiesSelect.addEventListener('change', (e) => {
 foodSelect.addEventListener('change', (e) => {
     const value = e.target.value;
     foodImg.src = `./assets/food-${value}.jpg`;
-    console.log(foodSelect);
 
     foodCounter++;
 
@@ -39,10 +42,20 @@ foodSelect.addEventListener('change', (e) => {
 
 // drinks section
 
+drinkSelect.addEventListener('change', (e) => {
+    const value = e.target.value;
+    drinkImg.src = `./assets/drinks-${value}.jpg`;
+
+    drinkCounter++;
+
+    displayStats();
+});
+
 /* Display Functions */
 function displayStats() {
     activitiesChangeCounter.textContent = `${activitiesCounter}`;
     foodChangeCounter.textContent = `${foodCounter}`;
+    drinkChangeCounter.textContent = `${drinkCounter}`;
 }
 
 // (don't forget to call any display functions you want to run on page load!)
