@@ -15,8 +15,32 @@
     -   `img` 3 for each dropdown matching values above
     -   `#counter` to match each value above
 
--   `section #slogan`
+-   `section #favorite`
     -   `input` "What's your favorite spot in Portland?"
+
+### State (What we're keeping track of)
+
+-   activities change counter (section 1)
+-   food change counter (section 2)
+-   drinks change counter (section 3)
+-   favorite array (section 4)
+
+### Events (Events that are changing)
+
+-   activities select (on change, section 1)
+
+    -   on change: increment counter and switch image
+
+-   food select (on change, section 2)
+
+    -   on change: increment counter and switch image
+
+-   drinks select (on change, section 3)
+
+    -   on change: increment counter and switch image
+
+-   favorite add add button
+    -   on click: push the input value into the array in state, display favorites in the array
 
 ## Workflow
 
