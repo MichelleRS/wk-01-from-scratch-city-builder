@@ -13,6 +13,10 @@ const drinkSelect = document.getElementById('drink-select');
 const drinkImg = document.getElementById('drink-img');
 const drinkChangeCounter = document.getElementById('drink-counter');
 
+const favoriteInput = document.getElementById('favorite-input');
+const shareButton = document.getElementById('share-button');
+const favoriteList = document.getElementById('favorite-list');
+
 /* State */
 
 let activitiesCounter = 0;
