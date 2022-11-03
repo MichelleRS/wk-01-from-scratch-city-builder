@@ -44,13 +44,15 @@
 
 ## Workflow
 
--   Find pics
+-   displayStats()
+-   Finish eventListeners for food and drinks
+-   add favorite section and functionality
 -   Research for/of loop
 
 ## Rubric
 
--   [] At least 3 dropdowns, with at least 3 options each. 6
--   [] On changing dropdowns, new images are displayed (1 point per dropdown) 6
+-   [x] At least 3 dropdowns, with at least 3 options each. 6
+-   [x] On changing dropdowns, new images are displayed (1 point per dropdown) 6
 -   [] The number of times each dropdown has changed is displayed to the user 2
 -   [] An input with a button that allows the user to pick a slogan and displays to user 2
     **Functions**
