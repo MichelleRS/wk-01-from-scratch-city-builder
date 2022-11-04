@@ -1,27 +1,55 @@
-## The Golden Rule:
+# Week 01 From Scratch City Builder
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+## Expected Layout
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+![wireframe](./assets/citybuilderwireframe.png)
 
-## Making a plan
+### HTML
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+-   `header`>`h1` Plan your day!
+-   `main`
 
-Additional considerations:
+-   `section #dropdown-section > #activities #food #drinks`
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+    -   `input` values: activities, food, drinks
+    -   `img` 3 for each dropdown matching values above
+    -   `#counter` to match each value above
+
+-   `section #favorite`
+    -   `input` "What's your favorite spot in Portland?"
+
+### State (What we're keeping track of)
+
+-   activities change counter (section 1)
+-   food change counter (section 2)
+-   drinks change counter (section 3)
+-   favorite array (section 4)
+
+### Events (Events that are changing)
+
+-   activities select (on change, section 1)
+
+    -   on change: increment counter and switch image
+
+-   food select (on change, section 2)
+
+    -   on change: increment counter and switch image
+
+-   drinks select (on change, section 3)
+
+    -   on change: increment counter and switch image
+
+-   favorite add add button
+    -   on click: push the input value into the array in state, display favorites in the array
+
+## Workflow
+
+## Rubric
+
+-   [x] At least 3 dropdowns, with at least 3 options each. 6
+-   [x] On changing dropdowns, new images are displayed (1 point per dropdown) 6
+-   [x] The number of times each dropdown has changed is displayed to the user 2
+-   [x] An input with a button that allows the user to pick a slogan and displays to user 2
+        **Functions**
+-   [x] Impure `displayStats(): attaches a string to the DOM describing how many times each dropdown has been changed` 2
+-   [x] Impure `displaySlogans() : clears DOM, loops through slogans, displays slogans on the page` 2

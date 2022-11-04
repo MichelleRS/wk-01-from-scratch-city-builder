@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <h1>Plan your day in Portland!</h1>
+        </header>
 
-</head>
+        <main>
+            <section class="dropdowns">
+                <!-- activities options -->
+                <div class="select-container">
+                    <label for="activities">
+                        activities
+                        <select name="" id="activities-select">
+                            <option value="cycling">cycling</option>
+                            <option value="rose-garden">rose garden</option>
+                            <option value="farmers-market">farmers market</option>
+                        </select>
+                    </label>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
+                    <img src="./assets/activities-cycling.jpg" alt="" id="activities-img" />
+                    <div class="counter">
+                        You have tried <span id="activities-counter">0</span> activities.
+                    </div>
+                </div>
 
-    <main>
+                <!-- food options -->
+                <div class="select-container">
+                    <label for="food">
+                        food
+                        <select name="" id="food-select">
+                            <option value="donuts">donuts</option>
+                            <option value="ramen">ramen</option>
+                            <option value="truck">food truck</option>
+                        </select>
+                    </label>
+                    <img src="/assets/food-donuts.jpg" alt="" id="food-img" />
+                    <div class="counter">You have tried <span id="food-counter">0</span> food</div>
+                </div>
 
-    </main>
+                <!-- drink options -->
+                <div class="select-container">
+                    <label for="drinks">
+                        drinks
+                        <select name="" id="drink-select">
+                            <option value="beer">beer</option>
+                            <option value="boba">boba tea</option>
+                            <option value="coffee">coffee</option>
+                        </select>
+                    </label>
+                    <img src="assets/drinks-beer.jpg" alt="" id="drink-img" />
+                    <div class="counter">
+                        You have tried <span id="drink-counter">0</span> drinks
+                    </div>
+                </div>
+            </section>
 
-</body>
-
+            <section class="favorite">
+                <label for="favorite-input">What's your favorite spot?</label>
+                <input type="text" id="favorite-input" />
+                <button id="share-button">Share</button>
+                <ul id="favorite-list"></ul>
+            </section>
+        </main>
+    </body>
 </html>
